@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+
+	<package name="registration" extends="struts-default">
+<!-- 
+		<action name="persionaction" class="persionaction">
+			
+			<result name="success">/registerSuccess.jsp</result>
+			<result name="fail">/registerFail.jsp</result>
+			<result name="list">/userlist.jsp</result>
+			<result name="load">/user.jsp</result>
+		</action>
+-->
+		<action name="*_*" class="{1}action" method="{2}">
+			
+			<result type="dispatcher">${ret}</result>
+			<!--
+			<result name="success">/registerSuccess.jsp</result>
+			<result name="fail">/registerFail.jsp</result>
+			<result name="list">/userlist.jsp</result>
+			<result name="load">/user.jsp</result>
+			-->
+		</action>
+	</package>
+
+
+</struts>
+	
